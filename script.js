@@ -187,7 +187,7 @@ Smc.playerTypes.Student = (function() {
         this._onMove = _onMove;
     };
 })();
-Smc.playerTypes.Student.prototype = Smc.playerTypes.Player.prototype;
+Smc.playerTypes.Student.prototype = Object.create(Smc.playerTypes.Player.prototype);
 
 Smc.playerTypes.Mexican = (function() {
     return function() {
@@ -195,7 +195,7 @@ Smc.playerTypes.Mexican = (function() {
         this._phaserObject.body.immovable      = true;
     };
 })();
-Smc.playerTypes.Mexican.prototype = Smc.playerTypes.Player.prototype;
+Smc.playerTypes.Mexican.prototype = Object.create(Smc.playerTypes.Player.prototype);
 
 /**
  * Builds a Phaser event handler for a specific event.
